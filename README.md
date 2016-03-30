@@ -46,7 +46,7 @@ Studio or Ionide; on Windows, we recommend Visual Studio.
    [Visual Studio Community edition](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).
    This is a big download, so make sure to get it before the workshop!
 
-### R with R Studio.
+### R with the R Studio IDE
 
 For the second part, we will be using R. You need to download R itself and we
 recommend getting RStudio, which is a nice editor for using R.
