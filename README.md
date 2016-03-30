@@ -36,15 +36,15 @@ Follow the instructions on [fsharp.org](http://fsharp.org) for
 [Linux](http://fsharp.org/use/linux). On Mac, we recommend Xamarin
 Studio or Ionide; on Windows, we recommend Visual Studio.
 
- - **Xamarin.** On Mac [Download Xamarin](https://www.xamarin.com/download). This
+ 1. **Xamarin (Mac/Windows).** [Download Xamarin](https://www.xamarin.com/download). This
    automatically installs mono and F#, so it should give you all you need.
 
- - **Atom with Ionide.** On Mac or Windows, follow the installation instructions
+ 2. or **Atom with Ionide (Mac/Windows).** Follow the installation instructions
    in "Getting started" on [Ionide](http://ionide.io/) page. You'll need to
    install mono (Mac and Linux) or F# (Windows) and [Atom](http://atom.io).
    Then install the `ionide-installer` package.
 
- - **Visual Studio.** On Windows, you can get the free
+ 3. or **Visual Studio (Windows).** You can get the free
    [Visual Studio Community edition](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).
    This is a big download, so make sure to get it before the workshop!
 
@@ -53,26 +53,9 @@ Studio or Ionide; on Windows, we recommend Visual Studio.
 For the second part, we will be using R. You need to download R itself and we
 recommend getting RStudio, which is a nice editor for using R.
 
- - **R project.** Get the latest version of R from
+ 1. **R project.** Get the latest version of R from
    [www.r-project.org](http://www.r-project.org). Pick any mirror on the
    download page. They are all the same!
 
- - **R Studio.** Download [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/).
+ 2. **R Studio.** Download [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/).
    You can use the free open-source edition for the workshop.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a
