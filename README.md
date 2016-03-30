@@ -53,7 +53,6 @@ recommend getting RStudio, which is a nice editor for using R.
 
  1. **R project.** Get the latest version of R from
    [www.r-project.org](http://www.r-project.org). Pick any mirror on the
-   download page. They are all the same!
-
- 2. and **R Studio.** Get [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/).
+   download page. 
+ 2. and **R Studio.** Download [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/).
    You can use the free open-source edition for the workshop.
