@@ -36,8 +36,9 @@ Follow the instructions on [fsharp.org](http://fsharp.org) for
 [Linux](http://fsharp.org/use/linux). On Mac, we recommend Xamarin
 Studio or Ionide; on Windows, we recommend Visual Studio.
 
- 1. **Xamarin (Mac/Windows).** [Download Xamarin](https://www.xamarin.com/download). This
-   installs mono and F#, so it should give you all you need.
+ 1. **Xamarin (Mac/Windows).** [Download MonoDevelop (Xamarin Studio)](http://www.monodevelop.com/download/). 
+   Follow the instructions, you'll need to install [mono](http://www.mono-project.com/download/) which includes F#,
+   then install the Xamarin Studio.
  2. or **Atom with Ionide (Mac/Windows).** Follow the installation instructions
    in "Getting started" on [Ionide](http://ionide.io/) page. You'll need to
    install mono (Mac and Linux) or F# (Windows) and [Atom](http://atom.io).
