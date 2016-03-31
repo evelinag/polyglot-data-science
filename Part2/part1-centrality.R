@@ -37,49 +37,49 @@ d = degree(g)
 # b) typing help(function) into the console
 # c) searching in the Help viewer in Rstudio
 
-# what is the average degree? Use the function 'mean' to find out
-mean(d)
+# TODO: what is the average degree? Use the function 'mean' to find out
 
-# Use the function 'summary' to get statistical summary of the values
-summary(d)
 
-# Plot the degree values with the function 'plot'
-plot(d)
+# TODO: Use the function 'summary' to get statistical summary of the values
 
-# Look into the documentation for the 'plot' function and change the default 
+
+# TODO: Plot the degree values with the function 'plot'
+
+
+# TODO: Look into the documentation for the 'plot' function and change the default 
 # plot into a histogram-like vertical lines plot
-plot(d, type="h")
 
-# Use the function 'sort' to sort the degrees - who is the most central character?
-sort(d)
 
-# Look at the documentation for the 'sort' function and sort the degrees in the
+# TODO: Use the function 'sort' to sort the degrees - who is the most central character?
+
+
+# TODO: Look at the documentation for the 'sort' function and sort the degrees in the
 # decreasing order
-sort(d, decreasing = TRUE) # or
-d %>% sort(decreasing = TRUE)
+
 
 #---------------
 # Computing other network measures
 #--------------
-# Betweenness - search the igraph documentation to find the function to compute
+
+# Betweenness 
+# TODO: search the igraph documentation to find the function to compute
 # betweenness in a network
 # http://igraph.org/r/doc/
-b = betweenness(g) 
 
-# Who has the largest betweenness? 
+
+# TODO: Who has the largest betweenness? 
 # How does the order of characters differ?
-b %>% sort(decreasing = T)
 
-# Plot the betweenness distribution 
+
+# TODO: Plot the betweenness distribution 
 # - how is it different from the degree distribution?
-plot(b)
+
 
 #--------------
 # Bonus question
 #--------------
 # Other measure of centrality is the PageRank. Can we compute it using the igraph 
 # package?
-page_rank(g)$vector
 
 # Export networks for other episodes into lists of edges 
 # and repeat the analysis. Who is the most central character in the original 
