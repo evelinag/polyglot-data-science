@@ -1,3 +1,6 @@
 .DS_Store
 *.sln
 .Rhistory
+*.suo
+Part1/packages
+Part1/install/paket.exe
