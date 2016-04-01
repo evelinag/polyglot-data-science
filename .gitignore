@@ -4,6 +4,10 @@
 *.suo
 Part1/packages
 Part1/install/paket.exe
+Part1/.fake
+Part2/packages
+Part2/install/paket.exe
+Part2/.fake
 slides/packages
 slides/.paket/paket.exe
 slides/.fake
