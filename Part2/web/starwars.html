@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500;
+
+var color = d3.scale.category20();
+
+var force = d3.layout.force()
+    .charge(-120)
+    .linkDistance(30)
+    .size([width, height]);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// TODO (1): Modify the line below to load your Star Wars links JSON instead!
+// (You will need to copy the JSON files from the "data" folder of "Part1")
+d3.json("miserables.json", function(error, graph) {
+  if (error) throw error;
+
+  force
+      .nodes(graph.nodes)
+      .links(graph.links)
+      .start();
+
+  var link = svg.selectAll(".link")
+      .data(graph.links)
+      .enter().append("line")
+      .attr("class", "link")
+      .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+  var node = svg.selectAll(".node")
+      .data(graph.nodes)
+      .enter().append("circle")
+      .attr("class", "node")
+      // TODO (2): Modify the following line to use the color that is
+      // specified in the JSON file. In "miserables.json", each node has
+      // a "group" attribute that specifies its group (this is accessed
+      // using "d.group" here). In Star Wars, we have color directly
+      // for each node, so you can just return "d.color" ('d' is the
+      // JSON object from the source file)
+      .style("fill", function(d) { return color(d.group); })
+      // TODO (3): Change the next line to calculate the radius based on
+      // the "value" element in the JSON file. You can use 'attr' in two ways:
+      //
+      //  - .attr("r", 5)   // sets a constant value for the attribute
+      //  - .attr("r", function(d) { return ... }) // calculates the value
+      //                    // based on properties of the JSON node 'd'
+      //
+      // Play with different ways of calculating the function from 'd.value'
+      // (using Math.sqrt is nicer, because it makes the differences between
+      // big and small values a bit less visible).
+      .attr("r", 5)
+      .call(force.drag);
+
+  node.append("title")
+      .text(function(d) { return d.name; });
+
+  force.on("tick", function() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node.attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  });
+});
+
+</script>
+</body>
