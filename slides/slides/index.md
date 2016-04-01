@@ -43,6 +43,28 @@
 *********
 
 # Part II
+## Visualization with D3.js
+
+--------
+
+![](images/d3js.png)
+
+--------
+# D3.js visualizations
+## made easier
+
+[Gallery of examples](https://github.com/mbostock/d3/wiki/Gallery)
+
+--------
+
+# D3.js social network visualization
+
+[Force-directed network layout](http://bl.ocks.org/mbostock/4062045)
+
+
+*********
+
+# Part III
 ## Analyzing social networks with R
 
 --------
@@ -246,7 +268,11 @@ E_v = \text{Number of links between neighbours of $v$} \\ \\
 
     g <- graph(edges)
 
-- edges    
+- *edges* = list of nodes 
+
+n1, n2, n3, n4, n5, ... <br/>
+*represents*
+(n1, n2), (n3, n4), ...
 
 
 -----
@@ -257,7 +283,6 @@ E_v = \text{Number of links between neighbours of $v$} \\ \\
 
     d <- degree(graph)
 
-
 -----
 - data-background : #212d30
 
@@ -266,6 +291,15 @@ E_v = \text{Number of links between neighbours of $v$} \\ \\
     open RProvider.igraph
 
     let centrality = R.betweenness(network)
+
+-----
+- data-background : #212d30
+
+# F#
+export JSON into list of edges
+
+# R
+perform the network analysis
 
 
 -----
@@ -314,26 +348,6 @@ function drawChart() {
 </script>
 <div id="a84d0fe6-8cc8-4351-a397-114a1bc9ff0c" style="width: 1200px; height: 600px"></div>
 
-********
-
-# Part III
-## Visualization with D3.js
-
---------
-
-![](images/d3js.png)
-
---------
-# D3.js visualizations
-## made easier
-
-[Gallery of examples](https://github.com/mbostock/d3/wiki/Gallery)
-
---------
-
-# D3.js social network visualization
-
-[Force-directed network layout](http://bl.ocks.org/mbostock/4062045)
 
 --------
 

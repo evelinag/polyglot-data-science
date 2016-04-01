@@ -7,7 +7,9 @@
 
 # Prerequisites:
 # Set working directory to the source code directory:
-setwd("~/Projects/PolyglotDataScience/Part2")
+
+# TODO: Update the location
+setwd("~/Projects/PolyglotDataScience/Part3")
 
 # Install the necessary packages
 install.packages("magrittr")
@@ -20,7 +22,7 @@ library(magrittr)
 
 # Load the csv data
 edgeList <- 
-  read.csv("../data/edgeList_episode7.csv", header=F, stringsAsFactors=F) %>% 
+  read.csv("../data/edgelist7.csv", header=F, stringsAsFactors=F) %>% 
   as.character
 
 # Creating an undirected graph from the list of edges
