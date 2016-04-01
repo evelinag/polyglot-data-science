@@ -42,4 +42,4 @@ let edges =
 File.WriteAllLines(__SOURCE_DIRECTORY__ + "/../data/edgelist.csv", [| edges; "" |])
 
 // TODO: Modify the code to do this separately for Episode 7
-// (use the "data/netwSork7.json" file and save it as "edgelist7.csv")
+// (use the "data/network7.json" file and save it as "edgelist7.csv")
