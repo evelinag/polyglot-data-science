@@ -1,0 +1,396 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Polyglot data science</title>
+    <meta name="description" content="Polyglot data science with F#, R and D3.js">
+    <meta name="author" content="Evelina Gabasova">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="//code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/deedle.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="fsharp.formatting/styles/tips.js" type="text/javascript"></script>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/fsreveal.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script language="javascript" type="text/javascript">
+        function init()
+        {
+            websocket = new WebSocket("ws://"+window.location.host+"/websocket");
+            websocket.onmessage = function(evt) { location.reload(); };
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="tip" id="fs1">val centrality : obj<br /><br />Full name: index.centrality</div>
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section >
+<h1>Polyglot data science</h1>
+<h1><div class="sw"> the force awakens </div></h1>
+<h2>with F#, R and D3.js</h2>
+<ul>
+<li>Evelina Gabasova <strong>@evelgab</strong></li>
+<li>Tomas Petricek <strong>@tomaspetricek</strong></li>
+</ul>
+</section>
+<section >
+<section >
+<h1>Part I</h1>
+<h2>F# with type providers</h2>
+</section>
+<section >
+<p>...</p>
+</section>
+<section >
+<h1>Visualization with Google Charts</h1>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+                google.load("visualization", "1", {packages:["corechart"]})
+                google.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Title" ,"label": "Title" }, {"type": "number" ,"id": "Year" ,"label": "Year" }, {"type": "number" ,"id": "Box office" ,"label": "Box office" }, {"type": "number" ,"id": "Rating" ,"label": "Rating" }, {"type": "number" ,"id": "Budget" ,"label": "Budget" }], "rows" : [{"c" : [{"v": "Star Wars"}, {"v": 1977}, {"v": 775398007}, {"v": 94}, {"v": 11000000}]}, {"c" : [{"v": "The Empire Strikes Back"}, {"v": 1980}, {"v": 538375067}, {"v": 94}, {"v": 22000000}]}, {"c" : [{"v": "Return of the Jedi"}, {"v": 1983}, {"v": 475106177}, {"v": 80}, {"v": 37600000}]}, {"c" : [{"v": "Episode I - The Phantom Menace"}, {"v": 1999}, {"v": 1027044677}, {"v": 56}, {"v": 115000000}]}, {"c" : [{"v": "Episode II - Attack of the Clones"}, {"v": 2002}, {"v": 649398328}, {"v": 66}, {"v": 115000000}]}, {"c" : [{"v": "Episode III - Revenge of the Sith"}, {"v": 2005}, {"v": 848754768}, {"v": 79}, {"v": 113000000}]}, {"c" : [{"v": "Star Wars: The Clone Wars"}, {"v": 2008}, {"v": 68282844}, {"v": 18}, {"v": 8500000}]}, {"c" : [{"v": "Star Wars: The Force Awakens"}, {"v": 2015}, {"v": 2058323187}, {"v": 92}, {"v": 200000000}]}]});
+                var options = {"colors":["red","gold"],"hAxis":{"title":"Year","viewWindowMode":"explicit","viewWindow":{"max":2020,"min":1975}},"legend":{"position":"none"},"title":"Star Wars - rating and box office","vAxis":{"title":"Box office"},"bubble":{"textStyle":{"color":"transparent"}},"width":1000,"height":600} 
+                var chart = new google.visualization.BubbleChart(document.getElementById('b46bd5ac-5b6c-4725-a5b8-6d2114a04922'));
+                chart.draw(data, options);
+            }
+            </script>
+<div id="b46bd5ac-5b6c-4725-a5b8-6d2114a04922" style="width: 1100px; height: 600px"></div>
+</section>
+</section>
+<section >
+<section >
+<h1>Part II</h1>
+<h2>Analyzing social networks with R</h2>
+</section>
+<section >
+<h1>Social network analysis</h1>
+<ul>
+<li>Who is the most central character?</li>
+<li>How to the movies compare between themselves?</li>
+</ul>
+</section>
+<section >
+<h1>Degree</h1>
+<p><img src="images/network-basic.png" alt="Network" /></p>
+</section>
+<section >
+<h1>Degree</h1>
+<p><img src="images/degree1.png" alt="Degree" /></p>
+</section>
+<section >
+<h1>Degree</h1>
+<p><img src="images/degree2.png" alt="Degree" /></p>
+</section>
+<section >
+<h1>Degree</h1>
+<br />
+<p><span class="math">\[\text{Degree}(v) = \text{Number of links }v \leftrightarrow v' \\
+v \neq v'\]</span></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<p><img src="images/network-basic.png" alt="Betweenness" /></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<p><img src="images/betweenness1.png" alt="Betweenness" /></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<p><img src="images/betweenness2.png" alt="Betweenness" /></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<p><img src="images/betweenness3.png" alt="Betweenness" /></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<p><img src="images/betweenness4.png" alt="Betweenness" /></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<br />
+<p><span class="math">\[S_v = \text{Number of shortest paths between $a$ and $b$ through $v$} \\
+S = \text{Number of shortest paths between $a$ and $b$} \\ \\
+\text{Betweenness}(v)_{ab} = \frac{S_v}{S}\]</span></p>
+</section>
+<section >
+<h1>Betweenness</h1>
+<br />
+<p><span class="math">\[S_v = \text{Number of shortest paths between $a$ and $b$ through $v$} \\
+S = \text{Number of shortest paths between $a$ and $b$} \\ \\
+\text{Betweenness}(v) = \sum_{ab} \frac{S_v}{S}\]</span></p>
+</section>
+<section >
+<h1>Network structure</h1>
+<p>How do the the movies differ?</p>
+<ul>
+<li>Size</li>
+<li>Density</li>
+<li>Clustering coefficient</li>
+</ul>
+</section>
+<section data-background="images/senate.jpeg">
+</section>
+<section >
+<h1>Density</h1>
+<p><img src="images/network-basic.png" alt="Network" /></p>
+</section>
+<section >
+<h1>Density</h1>
+<p><img src="images/full.png" alt="Network" /></p>
+</section>
+<section >
+<h1>Density</h1>
+<br />
+<p><span class="math">\[\begin{align}
+\text{Density} &amp;= \frac{\text{Existing connections}}{\text{Potential connections}} \\
+&amp; \\
+&amp;= \frac{\text{Existing connections}}{\frac{1}{2}N(N-1)}
+\end{align}\]</span></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<p><img src="images/network-basic.png" alt="Network" /></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<p><img src="images/clustering1.png" alt="Clustering" /></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<p><img src="images/clustering2.png" alt="Clustering" /></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<p><img src="images/clustering3.png" alt="Clustering" /></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<p><img src="images/clustering4.png" alt="Clustering" /></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<p><img src="images/clustering5.png" alt="Clustering" /></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<br />
+<p><span class="math">\[K_v = \text{Number of neighbours of $v$} \\
+E_v = \text{Number of links between neighbours of $v$} \\ \\
+\text{Clustering}(v) = \frac{E_v}{\frac{1}{2} K_v (K_v - 1)}\]</span></p>
+</section>
+<section >
+<h1>Clustering coefficient</h1>
+<br />
+<p><span class="math">\[K_v = \text{Number of neighbours of $v$} \\
+E_v = \text{Number of links between neighbours of $v$} \\ \\
+\text{Clustering}(\text{network}) = \frac{1}{N} \sum_v \frac{E_v}{\frac{1}{2}  K_v (K_v - 1)}\]</span></p>
+</section>
+<section >
+<h1>The R language</h1>
+<p><img src="images/Rlogo.png" alt="" /></p>
+<ul>
+<li>"domain-specific" language for statistical analysis</li>
+</ul>
+</section>
+<section >
+<h1>Very quick R intro</h1>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="R"># assignment
+x &lt;- 1
+x = 1
+
+# variable names
+x
+x.y
+</code></pre></td></tr></table>
+</section>
+<section >
+<h1>Very quick R intro: pipeline</h1>
+<h2>|&gt; turns into %&gt;%</h2>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="R">install.packages("magrittr")
+library(magrittr)
+
+xs &lt;- c(1,2,3,4,5,6,7,8,9,10)
+xs %&gt;% mean
+</code></pre></td></tr></table>
+</section>
+<section >
+<h1>Network analysis with igraph</h1>
+<ul>
+<li><a href="http://igraph.org/r/">igraph website</a></li>
+<li><a href="http://igraph.org/r/doc/">igraph documentation</a></li>
+</ul>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="R">install.packages("igraph")
+library(igraph)
+</code></pre></td></tr></table>
+</section>
+<section >
+<h1>Calculating degree</h1>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="R">library(igraph)
+
+d &lt;- degree(graph)
+</code></pre></td></tr></table>
+</section>
+<section data-background="#212d30">
+<h1>F#</h1>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">RProvider</span><span class="o">.</span><span class="i">igraph</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">centrality</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">betweenness</span>(<span class="i">network</span>)
+</code></pre></td>
+</tr>
+</table>
+</section>
+<section >
+<h1><div class="sw"> Size </div></h1>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 38}]}, {"c" : [{"v": "Episode 2"}, {"v": 33}]}, {"c" : [{"v": "Episode 3"}, {"v": 25}]}, {"c" : [{"v": "Episode 4"}, {"v": 22}]}, {"c" : [{"v": "Episode 5"}, {"v": 21}]}, {"c" : [{"v": "Episode 6"}, {"v": 20}]}, {"c" : [{"v": "Episode 7"}, {"v": 27}]}]});
+    var options = {"colors":["#c43b80"],"hAxis":{"title":"Number of characters","viewWindowMode":"explicit","viewWindow":{"max":40,"min":0}},"legend":{"position":"none"},"title":"Number of characters","width":1000,"height":600} 
+    var chart = new google.visualization.BarChart(document.getElementById('55ec49cf-f2ee-4e40-ad93-2fb5e6943f7b'));
+    chart.draw(data, options);
+}
+</script>
+<div id="55ec49cf-f2ee-4e40-ad93-2fb5e6943f7b" style="width: 1200px; height: 600px"></div>
+</section>
+<section >
+<h1><div class="sw"> Density </div></h1>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 19.203413940256}]}, {"c" : [{"v": "Episode 2"}, {"v": 19.1287878787879}]}, {"c" : [{"v": "Episode 3"}, {"v": 25.6916996047431}]}, {"c" : [{"v": "Episode 4"}, {"v": 28.5714285714286}]}, {"c" : [{"v": "Episode 5"}, {"v": 26.1904761904762}]}, {"c" : [{"v": "Episode 6"}, {"v": 32.1637426900585}]}, {"c" : [{"v": "Episode 7"}, {"v": 26.2108262108262}]}]});
+    var options = {"colors":["#3bc4c4"],"hAxis":{"title":"Density (%)","viewWindowMode":"explicit","viewWindow":{"max":35,"min":15}},"legend":{"position":"none"},"title":"Network density","width":1000,"height":600} 
+    var chart = new google.visualization.BarChart(document.getElementById('b1a450b2-9caf-44f9-9db5-323fcf91f58c'));
+    chart.draw(data, options);
+}
+</script>
+<div id="b1a450b2-9caf-44f9-9db5-323fcf91f58c" style="width: 1200px; height: 600px"></div>
+</section>
+<section >
+<h1><div class="sw"> Clustering coefficient </div></h1>
+<script type="text/javascript">
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 0.447572132301196}]}, {"c" : [{"v": "Episode 2"}, {"v": 0.486666666666667}]}, {"c" : [{"v": "Episode 3"}, {"v": 0.498947368421053}]}, {"c" : [{"v": "Episode 4"}, {"v": 0.559808612440191}]}, {"c" : [{"v": "Episode 5"}, {"v": 0.604651162790698}]}, {"c" : [{"v": "Episode 6"}, {"v": 0.656992084432718}]}, {"c" : [{"v": "Episode 7"}, {"v": 0.588387096774194}]}]});
+    var options = {"hAxis":{"title":"Clustering coefficient"},"legend":{"position":"none"},"title":"Clustering coefficient (transitivity)","width":1000,"height":600} 
+    var chart = new google.visualization.BarChart(document.getElementById('a84d0fe6-8cc8-4351-a397-114a1bc9ff0c'));
+    chart.draw(data, options);
+}
+</script>
+<div id="a84d0fe6-8cc8-4351-a397-114a1bc9ff0c" style="width: 1200px; height: 600px"></div>
+</section>
+</section>
+<section >
+<section >
+<h1>Part III</h1>
+<h2>Visualization with D3.js</h2>
+</section>
+<section >
+<p><img src="images/d3js.png" alt="" /></p>
+</section>
+<section >
+<h1>D3.js visualizations</h1>
+<h2>made easier</h2>
+<p><a href="https://github.com/mbostock/d3/wiki/Gallery">Gallery of examples</a></p>
+</section>
+<section >
+<h1>D3.js social network visualization</h1>
+<p><a href="http://bl.ocks.org/mbostock/4062045">Force-directed network layout</a></p>
+</section>
+<section data-background="images/kyloapproves-loop3.gif">
+</section>
+</section>
+
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Add the nohighlight class and data-noescape attribute to code elements that have already been formatted by FSharp.Formatting
+        $('pre.highlighted code').addClass('nohighlight').attr('data-noescape', '');
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+</body>
+</html>
+
