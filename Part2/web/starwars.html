@@ -23,6 +23,13 @@ var width = 960,
 var color = d3.scale.category20();
 
 var force = d3.layout.force()
+// TODO (4): Experiment with the values of charge
+// and link distance to get a good looking 
+// network
+// There's an explanation of the different parameters
+// in the documentation: https://github.com/mbostock/d3/wiki/Force-Layout
+// There are also other parameters you can tweak to get
+// different network layouts
     .charge(-120)
     .linkDistance(30)
     .size([width, height]);
