@@ -208,9 +208,10 @@ E_v = \text{Number of links between neighbours of $v$} \\ \\
     x <- 1
     x = 1
 
-    # variable names
+    # variable and function names
     x
     x.y
+    read.csv
 
 -----
 
@@ -238,10 +239,21 @@ E_v = \text{Number of links between neighbours of $v$} \\ \\
 
 -----
 
-# Calculating degree
+# Creating igraph network
 
     [lang=R]
     library(igraph)
+
+    g <- graph(edges)
+
+- edges    
+
+
+-----
+
+# Calculating degree
+
+    [lang=R]
 
     d <- degree(graph)
 

@@ -16,3 +16,5 @@ g <- graph(edgeList, directed = FALSE)
 
 #---------------
 # 
+
+graph.density(g)
