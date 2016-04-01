@@ -6,4 +6,4 @@ Part1/packages
 Part1/install/paket.exe
 slides/packages
 slides/.paket/paket.exe
-
+slides/.fake
