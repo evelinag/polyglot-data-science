@@ -78,8 +78,12 @@ d = degree(g)
 #--------------
 # Bonus question
 #--------------
-# Other measure of centrality is the PageRank. Can we compute it using the igraph 
-# package?
+# Other measure of centrality is the PageRank. How can we compute it using the igraph 
+# package? 
+
+# Who has the largest PageRank? You can access individual elements of the 
+# results using the $ operator
+
 
 # Export networks for other episodes into lists of edges 
 # and repeat the analysis. Who is the most central character in the original 
