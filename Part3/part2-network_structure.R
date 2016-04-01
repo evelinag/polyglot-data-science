@@ -43,23 +43,27 @@ g <- graph(edgeList, directed = FALSE)
 
 
 #--------------
-# Comparing the networks
+# Advanced: comparing the networks
 #--------------
 
-# You can write a for loop in R as follows:
-results <- c()
+# Something that might help:
+
+# You can write a simple for loop in R as follows:
+# create empty list
+results <- c()  
 for (i in 1:10) {
-  results <- c(results, i)
+  # append value to the list
+  results[i] <- i     
 }
 
+# String manipulation - concatenate two strings using the separator
+i <- 7
+s <- paste("episode", i, sep="-")
 
-
-# Compare networks for individual episodes
+# TODO: Load all 7 social networks and compare the individual episodes
 # - which network is the largest?
 # - which network is the most dense?
 # - which network has the largest clustering coefficient?
-
-
 
 
 #--------------
