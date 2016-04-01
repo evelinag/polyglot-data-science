@@ -8,7 +8,7 @@ open XPlot.GoogleCharts
 // PART 1: DEMO - Using HTML type provider for parsing tables 
 // ----------------------------------------------------------------------------
 
-type Brazil = HtmlProvider<"https://en.wikipedia.org/wiki/States_of_Brazil">
+type Brazil = HtmlProvider<"https://en.wikipedia.org/w/index.php?title=States_of_Brazil&oldid=702738616">
 let brazil = Brazil.GetSample()
 
 // Print the names and capitals of all states
@@ -98,7 +98,7 @@ not (demo.EndsWith("total"))
 // Store the 'good' rows in a new value named 'movieRows' like this:
 
 let movieRows = 
-  __
+  [ "TODO..." ]
 
 
 // Draw a column chart with budget for each movie and box office 
@@ -126,7 +126,7 @@ let movieRows =
 // 'Array.take 8' to get only the relevant data.
 
 let ratingRows =
-  __
+  [ "TODO..." ]
 
 
 // Now we need to combine 8 movieRows with 8 ratingRows. The way to do this
@@ -197,8 +197,8 @@ let data2 = [| ("Yes", 38.0); ("No", 32.0) |]
 // TASK 2: Create a bubble chart with information about the states of Brazil!
 // Experiment with different visualization - you can for example try using
 // state name, population and area for the X and Y axes and GDP per capita
-// (how rich is the state) for the bubble size.
-// Use the HtmlProvider with "https://en.wikipedia.org/wiki/States_of_Brazil".
+// (how rich is the state) for the bubble size. Use the HtmlProvider with:
+// "https://en.wikipedia.org/w/index.php?title=States_of_Brazil&oldid=702738616".
 
 
 // TASK #3: If you don't like Star Wars, try James Bond instead :-) 
