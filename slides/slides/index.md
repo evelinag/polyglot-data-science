@@ -151,10 +151,24 @@ Parameterized provider for a _data format_
             </script>
 <div id="b46bd5ac-5b6c-4725-a5b8-6d2114a04922" style="width: 1100px; height: 600px" class="fragment"></div>
 
+--------
+
+# [github.com/evelinag/polyglot-data-science](https://github.com/evelinag/polyglot-data-science)
+
 *********
 
 # Part II
 ## Visualization with D3.js
+
+--------
+
+# The Star Wars social network
+
+<a href="images/episode7-interactions.html"><img src="images/episode7_network.png" style="height:600px"/> </a>
+
+--------
+
+![script structure](images/script-example.png)
 
 --------
 
@@ -184,6 +198,7 @@ Parameterized provider for a _data format_
 
 * Who is the most central character?
 * How to the movies compare between themselves?
+
 
 -------
 
