@@ -7,3 +7,4 @@ Part1/install/paket.exe
 slides/packages
 slides/.paket/paket.exe
 slides/.fake
+slides/output
