@@ -74,6 +74,95 @@
 * Who is the most central character?
 * How to the movies compare between themselves?
 
+-------
+
+# The R language
+
+![](images/Rlogo.png)
+
+- "domain-specific" language for statistical analysis
+
+-----
+
+# Very quick R intro
+
+    [lang=R]
+    # assignment
+    x <- 1
+    x = 1
+
+    # variable and function names
+    x
+    x.y
+    read.csv
+
+-----
+
+# Very quick R intro: pipeline
+## |> turns into %>%
+
+    [lang=R]
+    install.packages("magrittr")
+    library(magrittr)
+
+    xs <- c(1,2,3,4,5,6,7,8,9,10)
+    xs %>% mean
+
+-----
+
+# Network analysis with igraph
+
+- [igraph website](http://igraph.org/r/)
+- [igraph documentation](http://igraph.org/r/doc/)
+
+
+    [lang=R]
+    install.packages("igraph")
+    library(igraph)
+
+-----
+
+# Creating igraph network
+
+    [lang=R]
+    library(igraph)
+
+    g <- graph(edges)
+
+- *edges* = list of nodes 
+
+n1, n2, n3, n4, n5, ... <br/>
+*represents*
+(n1, n2), (n3, n4), ...
+
+
+-----
+
+# Calculating degree
+
+    [lang=R]
+
+    d <- degree(graph)
+
+-----
+- data-background : #212d30
+
+# F#
+
+    open RProvider.igraph
+
+    let degree = R.degree(network)
+
+-----
+
+- data-background : #212d30
+
+# F#
+export JSON into list of edges
+
+# R
+perform the network analysis
+
 -----
 # Degree
 ![Network](images/network-basic.png)
@@ -213,93 +302,6 @@ E_v = \text{Number of links between neighbours of $v$} \\ \\
 \text{Clustering}(\text{network}) = \frac{1}{N} \sum_v \frac{E_v}{\frac{1}{2}  K_v (K_v - 1)}
 
 
--------
-
-# The R language
-
-![](images/Rlogo.png)
-
-- "domain-specific" language for statistical analysis
-
------
-
-# Very quick R intro
-
-    [lang=R]
-    # assignment
-    x <- 1
-    x = 1
-
-    # variable and function names
-    x
-    x.y
-    read.csv
-
------
-
-# Very quick R intro: pipeline
-## |> turns into %>%
-
-    [lang=R]
-    install.packages("magrittr")
-    library(magrittr)
-
-    xs <- c(1,2,3,4,5,6,7,8,9,10)
-    xs %>% mean
-
------
-
-# Network analysis with igraph
-
-- [igraph website](http://igraph.org/r/)
-- [igraph documentation](http://igraph.org/r/doc/)
-
-
-    [lang=R]
-    install.packages("igraph")
-    library(igraph)
-
------
-
-# Creating igraph network
-
-    [lang=R]
-    library(igraph)
-
-    g <- graph(edges)
-
-- *edges* = list of nodes 
-
-n1, n2, n3, n4, n5, ... <br/>
-*represents*
-(n1, n2), (n3, n4), ...
-
-
------
-
-# Calculating degree
-
-    [lang=R]
-
-    d <- degree(graph)
-
------
-- data-background : #212d30
-
-# F#
-
-    open RProvider.igraph
-
-    let centrality = R.betweenness(network)
-
------
-- data-background : #212d30
-
-# F#
-export JSON into list of edges
-
-# R
-perform the network analysis
 
 
 -----

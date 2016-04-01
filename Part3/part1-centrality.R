@@ -78,7 +78,7 @@ d = degree(g)
 
 
 #--------------
-# Bonus question
+# Bonus questions
 #--------------
 # Other measure of centrality is the PageRank. How can we compute it using the igraph 
 # package? 
